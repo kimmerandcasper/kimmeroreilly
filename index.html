@@ -26,19 +26,25 @@
             margin-top: 20px;
             border: 3px solid #FF0000; /* Neon Red border */
         }
+        .icon-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .center-icon {
+            flex-grow: 1;
+            text-align: center;
+        }
         .pdfIcon {
             width: 100%; /* Responsive width */
             max-width: 200px; /* Increased from 100px to 200px */
             height: auto; /* Maintain aspect ratio */
             display: inline-block;
-            margin: 5px 5px 1.25px; /* Reduced vertical margin from 2.5px to 1.25px */
         }
         .download-link {
-            display: inline-block;
-            margin: 0 5px; /* Spacing between download links */
+            margin: 5px; /* Adjusted margin */
         }
         .email, .download-text {
-            margin: 10px; /* Reduced from 20px to create less space between icon and text */
             font-size: 18px;
             color: #000000; /* Black text color */
             font-family: 'Nunito', sans-serif; /* Applying Nunito */
@@ -91,22 +97,26 @@
     <div class="bio">
         Surviving cancer twice reshaped my world, steering me from finance to seeking serenity. Now, I thrive on motorcycle rides with my service dog, Casper, and dive into software and hardware projects, merging creativity with tech prowess.
     </div>
-    <!-- PDF icons and download text -->
-    <div>
+    <div class="icon-container">
+        <!-- Left-aligned with the left side of the Tech Projects button -->
         <a href="https://www.instagram.com/kimmerandcasper" class="download-link">
             <img src="SocialMediaIcon.png" alt="Kimmer's Instagram" class="pdfIcon">
             <div class="download-text">Insta</div>
         </a>
-        <a href="MyResume.pdf" download class="download-link">
-            <img src="PDFicon.png" alt="Download Resume" class="pdfIcon">
-            <div class="download-text">Resume</div>
-        </a>
+        <!-- Centered icon -->
+        <div class="center-icon">
+            <a href="MyResume.pdf" download class="download-link">
+                <img src="PDFicon.png" alt="Download Resume" class="pdfIcon">
+                <div class="download-text">Resume</div>
+            </a>
+        </div>
+        <!-- Right-aligned with the right side of the Tech Projects button -->
         <a href="MyResume.pdf" download class="download-link">
             <img src="BookIcon.png" alt="Download Resume" class="pdfIcon">
             <div class="download-text">My Books</div>
         </a>
     </div>
-<div></div>
     <a href="link_to_your_story.html" class="button">Tech Projects</a>
+    <a href="link_to_your_story.html" class="button">My Dog Casper</a>
 </body>
 </html>
