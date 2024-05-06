@@ -4,60 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kimmer O'Reilly - Author & Professional</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Serif+Pro:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Nunito', sans-serif;
             text-align: center;
             padding: 20px;
-            background-color: #1a1a1a; /* Dark background for a tech look */
-            color: #ddd; /* Light text for contrast */
+            background-color: #f9f9f9;
+            color: #333;
             margin: 0 auto;
             max-width: 800px; /* Sets maximum width for the content */
         }
         h1, h2 {
-            color: #0d6efd; /* Bright blue for headers */
+            font-family: 'Serif Pro', serif;
+            color: #222;
         }
         img.profile, img.service-dog {
             width: 150px;
             height: auto;
             border-radius: 50%;
             margin-top: 20px;
-            border: 4px solid #0d6efd; /* Bright blue border */
+            border: 3px solid #007BFF;
         }
-        .email, .bio {
+        .email {
             margin: 20px;
-            font-size: 16px; /* Slightly smaller font for a sleek look */
-            color: #ccc; /* Light grey text */
+            font-size: 18px;
+            color: #555;
+            padding: 0 10px; /* Adds padding for small screens */
+        }
+        .bio {
+            margin: 20px;
+            font-size: 18px;
+            color: #555;
             padding: 0 10px;
             text-align: left;
         }
         .button {
             display: inline-block;
-            padding: 12px 24px;
+            padding: 10px 20px;
             margin: 10px;
-            background-color: #0d6efd; /* Bright blue background */
+            background-color: #007BFF;
             color: white;
-            border: 2px solid transparent;
-            border-radius: 8px; /* Sharper, larger radius */
+            border: none;
+            border-radius: 5px;
             text-decoration: none;
             font-size: 16px;
-            font-weight: bold; /* Bold font weight for readability */
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Subtle shadow for depth */
-            transition: all 0.3s ease; /* Smooth transition for hover effects */
+            transition: background-color 0.3s;
         }
         .button:hover {
-            background-color: white;
-            color: #0d6efd; /* Blue text on hover */
-            border-color: #0d6efd; /* Blue border on hover */
-            transform: translateY(-2px); /* Slight lift on hover */
+            background-color: #0056b3;
+            cursor: pointer;
         }
         @media (max-width: 768px) {
             body {
                 padding: 10px;
             }
             .bio {
-                font-size: 14px; /* Even smaller font size on smaller screens */
+                font-size: 16px; /* Slightly smaller font size on smaller screens */
             }
         }
     </style>
