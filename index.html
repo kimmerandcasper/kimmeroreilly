@@ -4,70 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kimmer O'Reilly - Author & Professional</title>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Serif+Pro:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Nunito', sans-serif;
+            font-family: 'Roboto', sans-serif;
             text-align: center;
             padding: 20px;
-            background-color: #f9f9f9;
-            color: #333;
+            background-color: #000; /* Black background */
+            color: #FF0000; /* Neon Red text color */
             margin: 0 auto;
-            max-width: 800px; /* Sets maximum width for the content */
+            max-width: 800px;
         }
         h1, h2 {
-            font-family: 'Serif Pro', serif;
-            color: #222;
+            color: #FF0000; /* Neon Red color for headings */
         }
         img.profile, img.service-dog {
             width: 150px;
             height: auto;
             border-radius: 50%;
             margin-top: 20px;
-            border: 3px solid #007BFF;
+            border: 3px solid #FF0000; /* Neon Red border */
         }
-        img.button {
-            width: 50px; /* Specific width for the PDF download icon */
-            height: 50px; /* Specific height for the PDF download icon */
-            display: block; /* Allows margin auto to center the image */
-            margin: 20px auto 10px; /* Margin to push the image down and center */
+        img.pdfIcon {
+            width: 100%; /* Responsive width */
+            max-width: 50px; /* Maximum width of 50px */
+            height: auto; /* Maintain aspect ratio */
+            display: block;
+            margin: 20px auto 10px;
         }
         .email, .download-text {
             margin: 20px;
             font-size: 18px;
-            color: #555;
-            padding: 0 10px; /* Adds padding for small screens */
+            color: #FF0000;
+            padding: 0 10px;
             text-align: center;
         }
         .bio {
             margin: 20px;
             font-size: 18px;
-            color: #555;
-            padding: 0 10px; /* Adds padding for small screens */
+            color: #FF0000;
+            padding: 0 10px;
             text-align: left;
         }
         .button {
             display: block;
             padding: 10px 20px;
-            margin: 10px auto; /* Center the buttons and download text */
-            background-color: #007BFF;
-            color: white;
+            margin: 10px auto;
+            background-color: #FF0000; /* Neon Red background */
+            color: #000; /* Black text */
             border: none;
             text-decoration: none;
             font-size: 16px;
-            width: 200px; /* Fixed width for uniform button sizes */
+            width: 200px;
             transition: background-color 0.3s;
         }
-        .pdfIcon {
-            display: block;
-            padding: 10px 20px;
-            margin: 10px auto; /* Center the buttons and download text */
-            border: none;
-            text-decoration: none;
-            font-size: 16px;
-        }
         .button:hover {
-            background-color: #0056b3;
+            background-color: #FF2121; /* Lighter Neon Red */
             cursor: pointer;
         }
         @media (max-width: 768px) {
@@ -78,7 +70,8 @@
                 font-size: 16px; 
             }
             .pdfIcon {
-                width: 50px; 
+                width: 100%;
+                max-width: 30px; /* Smaller max-width for smaller screens */
             }
         }
     </style>
