@@ -26,12 +26,16 @@
             margin-top: 20px;
             border: 3px solid #FF0000; /* Neon Red border */
         }
-        img.pdfIcon {
+        .pdfIcon {
             width: 100%; /* Responsive width */
             max-width: 50px; /* Maximum width of 50px */
             height: auto; /* Maintain aspect ratio */
-            display: block;
-            margin: 20px auto 10px;
+            display: inline-block;
+            margin: 20px 10px 5px; /* Space around the icons */
+        }
+        .download-link {
+            display: inline-block;
+            margin: 0 5px; /* Spacing between download links */
         }
         .email, .download-text {
             margin: 20px;
@@ -75,7 +79,6 @@
                 font-family: 'Nunito', sans-serif; /* Applying Nunito */
             }
             .pdfIcon {
-                width: 100%;
                 max-width: 30px; /* Smaller max-width for smaller screens */
             }
         }
@@ -88,11 +91,22 @@
     <div class="bio">
         Surviving cancer twice reshaped my world, steering me from finance to seeking serenity. Now, I thrive on motorcycle rides with my service dog, Casper, and dive into software and hardware projects, merging creativity with tech prowess.
     </div>
-    <a href="MyResume.pdf" download>
-        <img src="PDFicon.png" alt="Download Resume" class="pdfIcon">
-    </a>
-    <div class="download-text">Resume</div>
-    <div></div>
+    <!-- PDF icons and download text -->
+    <div>
+        <a href="MyResume.pdf" download class="download-link">
+            <img src="PDFicon.png" alt="Download Resume" class="pdfIcon">
+            <div class="download-text">Resume</div>
+        </a>
+        <a href="MyResume.pdf" download class="download-link">
+            <img src="PDFicon.png" alt="Download Resume" class="pdfIcon">
+            <div class="download-text">Resume</div>
+        </a>
+        <a href="MyResume.pdf" download class="download-link">
+            <img src="PDFicon.png" alt="Download Resume" class="pdfIcon">
+            <div class="download-text">Resume</div>
+        </a>
+    </div>
+    <!-- Button links -->
     <a href="link_to_your_story.html" class="button">Tech Projects</a>
     <a href="link_to_your_books.html" class="button">My Books</a>
 </body>
