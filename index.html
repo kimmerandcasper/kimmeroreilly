@@ -10,13 +10,13 @@
             font-family: 'Roboto', sans-serif;
             text-align: center;
             padding: 20px;
-            background-color: #000; /* Black background */
-            color: #FF0000; /* Neon Red text color */
+            background-color: #FFF; /* White background */
+            color: #000; /* Black text color */
             margin: 0 auto;
             max-width: 800px;
         }
         h1, h2 {
-            color: #FF0000; /* Neon Red color for headings */
+            color: #000; /* Black color for headings */
         }
         img.profile, img.service-dog {
             width: 150px;
@@ -35,14 +35,14 @@
         .email, .download-text {
             margin: 20px;
             font-size: 18px;
-            color: #FF0000;
+            color: #000; /* Black text color */
             padding: 0 10px;
             text-align: center;
         }
         .bio {
             margin: 20px;
             font-size: 18px;
-            color: #FF0000;
+            color: #000; /* Black text color */
             padding: 0 10px;
             text-align: left;
         }
@@ -50,24 +50,24 @@
             display: block;
             padding: 10px 20px;
             margin: 10px auto;
-            background-color: #FF0000; /* Neon Red background */
+            background-color: #FFF; /* White background */
             color: #000; /* Black text */
-            border: none;
+            border: 2px solid #FF0000; /* Neon Red border */
             text-decoration: none;
             font-size: 16px;
             width: 200px;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s, color 0.3s;
         }
         .button:hover {
-            background-color: #FF2121; /* Lighter Neon Red */
-            cursor: pointer;
+            background-color: #FF0000; /* Neon Red background */
+            color: #FFF; /* White text */
         }
         @media (max-width: 768px) {
             body {
                 padding: 10px;
             }
             .bio, .download-text {
-                font-size: 16px; 
+                font-size: 16px;
             }
             .pdfIcon {
                 width: 100%;
