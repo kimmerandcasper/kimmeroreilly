@@ -30,21 +30,21 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-        }
-        .center-icon {
-            flex-grow: 1;
-            text-align: center;
+            margin: 0 auto;
+            max-width: 800px;
         }
         .pdfIcon {
             width: 100%; /* Responsive width */
-            max-width: 200px; /* Increased from 100px to 200px */
             height: auto; /* Maintain aspect ratio */
-            display: inline-block;
         }
         .download-link {
-            margin: 5px; /* Adjusted margin */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 5px;
         }
         .email, .download-text {
+            margin: 10px;
             font-size: 18px;
             color: #000000; /* Black text color */
             font-family: 'Nunito', sans-serif; /* Applying Nunito */
@@ -77,15 +77,18 @@
             color: #FFFFFF; /* White text */
         }
         @media (max-width: 768px) {
-            body {
-                padding: 10px;
-            }
-            .bio, .download-text {
-                font-size: 16px;
-                font-family: 'Nunito', sans-serif; /* Applying Nunito */
-            }
             .pdfIcon {
-                max-width: 60px; /* Adjusted smaller max-width for smaller screens */
+                max-width: 60px; /* Smaller max-width for smaller screens */
+            }
+        }
+        @media (min-width: 769px) and (max-width: 1200px) {
+            .pdfIcon {
+                max-width: 80px; /* Slightly larger icons for tablets and small desktops */
+            }
+        }
+        @media (min-width: 1201px) {
+            .pdfIcon {
+                max-width: 100px; /* Limiting size for large screens */
             }
         }
     </style>
@@ -98,19 +101,16 @@
         Surviving cancer twice reshaped my world, steering me from finance to seeking serenity. Now, I thrive on motorcycle rides with my service dog, Casper, and dive into software and hardware projects, merging creativity with tech prowess.
     </div>
     <div class="icon-container">
-        <!-- Left-aligned with the left side of the Tech Projects button -->
         <a href="https://www.instagram.com/kimmerandcasper" class="download-link">
             <img src="SocialMediaIcon.png" alt="Kimmer's Instagram" class="pdfIcon">
             <div class="download-text">Insta</div>
         </a>
-        <!-- Centered icon -->
         <div class="center-icon">
             <a href="MyResume.pdf" download class="download-link">
                 <img src="PDFicon.png" alt="Download Resume" class="pdfIcon">
                 <div class="download-text">Resume</div>
             </a>
         </div>
-        <!-- Right-aligned with the right side of the Tech Projects button -->
         <a href="MyResume.pdf" download class="download-link">
             <img src="BookIcon.png" alt="Download Resume" class="pdfIcon">
             <div class="download-text">My Books</div>
