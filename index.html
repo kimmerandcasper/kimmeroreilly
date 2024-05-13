@@ -45,14 +45,10 @@
             margin: 0 auto;
             max-width: 800px;
         }
-        .pdfIcon, .bookIcon {
+        .pdfIcon {
             width: 100%;
             height: auto;
-            position: absolute; /* To overlay images */
             transition: opacity 1.5s; /* Smooth transition for opacity changes */
-        }
-        #bookIcon1 {
-            opacity: 1; /* First image starts visible */
         }
         .download-link {
             display: flex;
@@ -60,7 +56,6 @@
             align-items: center;
             margin: 5px;
             flex: 1;
-            position: relative; /* For positioning images absolutely */
         }
         .email, .download-text {
             margin: 10px;
@@ -78,7 +73,7 @@
             padding: 0 10px;
             text-align: center;
         }
-        .button1, .button2 {
+        .button1 {
             display: block;
             padding: 10px 20px;
             margin: 10px auto;
@@ -91,11 +86,21 @@
             width: 200px;
             transition: color 0.3s;
             background-size: cover;
-        }
-        .button1 {
             animation: electricBackground 4s infinite;
         }
         .button2 {
+            display: block;
+            padding: 10px 20px;
+            margin: 10px auto;
+            background-color: #ffffff;
+            color: #000000;
+            border: 2px solid #3a0070;
+            text-decoration: none;
+            font-size: 16px;
+            font-family: 'Nunito', sans-serif;
+            width: 200px;
+            transition: color 0.3s;
+            background-size: cover;
             animation: pawAnimation 12s infinite;
         }
         .button:hover {
@@ -103,17 +108,17 @@
             color: #FFFFFF;
         }
         @media (max-width: 768px) {
-            .pdfIcon, .bookIcon {
+            .pdfIcon {
                 max-width: 60px;
             }
         }
         @media (min-width: 769px) and (max-width: 1200px) {
-            .pdfIcon, .bookIcon {
+            .pdfIcon {
                 max-width: 80px;
             }
         }
         @media (min-width: 1201px) {
-            .pdfIcon, .bookIcon {
+            .pdfIcon {
                 max-width: 100px;
             }
         }
@@ -161,8 +166,7 @@
             <div class="download-text">RESUME</div>
         </a>
         <a href="https://www.amazon.com/s?k=kimmer+o%27reilly&i=stripbooks&crid=2ZSWFK6AF4H9Q&sprefix=kimmer+o%27reill%2Cstripbooks%2C203&ref=nb_sb_noss" class="download-link">
-            <img src="BookIcon1.png" alt="Download Books" class="bookIcon" id="bookIcon1"> <!-- Static background image -->
-            <img src="BookIcon2.png" alt="Download Books" class="bookIcon" id="bookIcon2" style="opacity: 0;"> <!-- Fading image -->
+            <img src="BookIcon1.png" alt="Download Books" class="pdfIcon" id="bookIcon">
             <div class="download-text">BOOKS</div>
         </a>
     </div>
@@ -200,14 +204,15 @@
         titleAnimation.start();
 
         let bookIconAnimation = {
+            images: ['BookIcon1.png', 'BookIcon2.png'],
+            currentIndex: 0,
             switchImage: function() {
-                const bookIcon2 = document.getElementById('bookIcon2');
-                // Check current opacity to determine next action
-                if (bookIcon2.style.opacity == '0') {
-                    bookIcon2.style.opacity = 1; // Fade in
-                } else {
-                    bookIcon2.style.opacity = 0; // Fade out
-                }
+                const bookIcon = document.getElementById('bookIcon');
+                setTimeout(() => {
+                    this.currentIndex = (this.currentIndex + 1) % this.images.length;
+                    bookIcon.src = this.images[this.currentIndex];
+                    bookIcon.style.opacity = 1; // Fade back in
+                }, 750); // Half of your intended transition time
             },
             start: function() {
                 setInterval(this.switchImage.bind(this), 1500); // Adjust as needed
