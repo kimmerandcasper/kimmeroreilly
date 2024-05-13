@@ -7,37 +7,36 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Nunito', sans-serif; /* Applying Nunito */
+            font-family: 'Nunito', sans-serif;
             text-align: center;
             padding: 20px;
-            background-color: #FFFFFF; /* Updated to white background */
-            color: #000000; /* Black text color */
+            background-color: #FFFFFF;
+            color: #000000;
             margin: 0 auto;
             max-width: 800px;
         }
         h1, h2 {
-            margin-top: 0px; /* Reduced top margin for the title */
-            color: #000000; /* Black color for headings */
-            font-family: 'Nunito', sans-serif; /* Ensure headings use Nunito */
+            margin-top: 0px;
+            color: #000000;
+            font-family: 'Nunito', sans-serif;
             display: flex;
             align-items: center;
             justify-content: center;
         }
         .title-animation {
-            height: 1.2em; /* Adjust to match the 'K' height */
-            width: 1.2em; /* Square images */
+            height: 1.2em;
+            width: 1.2em;
             margin: 0 10px;
         }
         .title-animation-right {
-            transform: scaleX(-1); /* Flip horizontally */
+            transform: scaleX(-1);
         }
-        
         img.profile, img.service-dog {
             width: 300px;
             height: auto;
             border-radius: 50%;
-            margin-top: 0px; /* Reduced top margin for the profile image */
-            border: 3px solid #3a0070; /* Neon Red border */
+            margin-top: 0px;
+            border: 3px solid #3a0070;
         }
         .icon-container {
             display: flex;
@@ -47,29 +46,29 @@
             max-width: 800px;
         }
         .pdfIcon {
-            width: 100%; /* Responsive width */
-            height: auto; /* Maintain aspect ratio */
+            width: 100%;
+            height: auto;
         }
         .download-link {
             display: flex;
             flex-direction: column;
             align-items: center;
             margin: 5px;
-            flex: 1; /* Equal flex-grow, flex-shrink and flex-basis */
+            flex: 1;
         }
         .email, .download-text {
             margin: 10px;
             font-size: 18px;
-            color: #000000; /* Black text color */
-            font-family: 'Nunito', sans-serif; /* Applying Nunito */
+            color: #000000;
+            font-family: 'Nunito', sans-serif;
             padding: 0 10px;
             text-align: center;
         }
         .bio {
             margin: 20px;
             font-size: 18px;
-            color: #000000; /* Black text color */
-            font-family: 'Nunito', sans-serif; /* Applying Nunito */
+            color: #000000;
+            font-family: 'Nunito', sans-serif;
             padding: 0 10px;
             text-align: center;
         }
@@ -77,33 +76,39 @@
             display: block;
             padding: 10px 20px;
             margin: 10px auto;
-            background-color: #ffffff; /* White background */
-            color: #000000; /* Black text */
-            border: 2px solid #3a0070; /* Neon Red border */
+            background-color: #ffffff;
+            color: #000000;
+            border: 2px solid #3a0070;
             text-decoration: none;
             font-size: 16px;
-            font-family: 'Nunito', sans-serif; /* Applying Nunito */
+            font-family: 'Nunito', sans-serif;
             width: 200px;
-            transition: background-color 0.3s, color 0.3s;
+            transition: color 0.3s;
+            background-size: cover;
+            animation: electricBackground 0.5s infinite;
         }
         .button:hover {
-            background-color: #3a0070; /* Neon Red background */
-            color: #FFFFFF; /* White text */
+            background-color: #3a0070;
+            color: #FFFFFF;
         }
         @media (max-width: 768px) {
             .pdfIcon {
-                max-width: 60px; /* Smaller max-width for smaller screens */
+                max-width: 60px;
             }
         }
         @media (min-width: 769px) and (max-width: 1200px) {
             .pdfIcon {
-                max-width: 80px; /* Slightly larger icons for tablets and small desktops */
+                max-width: 80px;
             }
         }
         @media (min-width: 1201px) {
             .pdfIcon {
-                max-width: 100px; /* Limiting size for large screens */
+                max-width: 100px;
             }
+        }
+        @keyframes electricBackground {
+            0%, 100% { background-image: url('Electric1.png'); }
+            50% { background-image: url('Electric2.png'); }
         }
     </style>
 </head>
@@ -126,7 +131,7 @@
             <img src="PDFicon.png" alt="Download Resume" class="pdfIcon">
             <div class="download-text">RESUME</div>
         </a>
-        <a href="https://www.amazon.com/s?k=kimmer+o%27reilly&i=stripbooks&crid=2ZSWFK6AF4H9Q&sprefix=kimmer+o%27reill%2Cstripbooks%2C203&ref=nb_sb_noss" download class="download-link">
+        <a href="https://www.amazon.com/s?k=kimmer+o%27reilly&i=stripbooks&crid=2ZSWFK6AF4H9Q&sprefix=kimmer+o%27reill%2Cstripbooks%2C203&ref=nb_sb_noss" class="download-link">
             <img src="BookIcon.png" alt="Download Resume" class="pdfIcon">
             <div class="download-text">BOOKS</div>
         </a>
@@ -148,7 +153,6 @@
         };
         imageSwitcher.start();
 
-        // New script for title animations
         let titleAnimation = {
             images: ['Flame1.png', 'Flame2.png', 'Flame3.png'],
             currentIndex: 0,
