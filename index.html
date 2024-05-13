@@ -88,8 +88,6 @@
             animation: electricBackground 0.25s infinite;
         }
         .button2 {
-    position: relative;
-    overflow: hidden; /* Ensures no spillover from the pseudo-element */
     display: block;
     padding: 10px 20px;
     margin: 10px auto;
@@ -101,24 +99,9 @@
     font-family: 'Nunito', sans-serif;
     width: 200px;
     transition: color 0.3s;
-}
-
-.button2::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
     background-size: cover;
-    z-index: -1;
-    animation: pawAnimation 16s infinite linear; /* Adjust time to match double cycle length */
+    animation: pawAnimation 4s infinite;
 }
-
-.button2 > * {
-    position: relative; /* Ensures button text appears above the pseudo-element */
-}
-
 
         .button:hover {
             background-color: #3a0070;
