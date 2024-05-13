@@ -88,20 +88,20 @@
             animation: electricBackground 4s infinite;
         }
         .button2 {
-    display: block;
-    padding: 10px 20px;
-    margin: 10px auto;
-    background-color: #ffffff;
-    color: #000000;
-    border: 2px solid #3a0070;
-    text-decoration: none;
-    font-size: 16px;
-    font-family: 'Nunito', sans-serif;
-    width: 200px;
-    transition: color 0.3s;
-    background-size: cover;
-    animation: pawAnimation 12s infinite;
-}
+            display: block;
+            padding: 10px 20px;
+            margin: 10px auto;
+            background-color: #ffffff;
+            color: #000000;
+            border: 2px solid #3a0070;
+            text-decoration: none;
+            font-size: 16px;
+            font-family: 'Nunito', sans-serif;
+            width: 200px;
+            transition: color 0.3s;
+            background-size: cover;
+            animation: pawAnimation 12s infinite;
+        }
 
         .button:hover {
             background-color: #3a0070;
@@ -128,25 +128,33 @@
         }
 
         @keyframes pawAnimation {
-    0%, 6.25% { background-image: url('Paw1.png'); transform: scaleX(1); }
-    6.25%, 12.5% { background-image: url('Paw2.png'); transform: scaleX(1); }
-    12.5%, 18.75% { background-image: url('Paw3.png'); transform: scaleX(1); }
-    18.75%, 25% { background-image: url('Paw4.png'); transform: scaleX(1); }
-    25%, 31.25% { background-image: url('Paw5.png'); transform: scaleX(1); }
-    31.25%, 37.5% { background-image: url('Paw6.png'); transform: scaleX(1); }
-    37.5%, 43.75% { background-image: url('Paw7.png'); transform: scaleX(1); }
-    43.75%, 50% { background-image: url('Paw8.png'); transform: scaleX(1); }
-    
-    /* Flipped Cycle */
-    50%, 56.25% { background-image: url('Paw9.png'); transform: scaleX(1); }
-    56.25%, 62.5% { background-image: url('Paw10.png'); transform: scaleX(1); }
-    62.5%, 68.75% { background-image: url('Paw11.png'); transform: scaleX(1); }
-    68.75%, 75% { background-image: url('Paw12.png'); transform: scaleX(1); }
-    75%, 81.25% { background-image: url('Paw13.png'); transform: scaleX(1); }
-    81.25%, 87.5% { background-image: url('Paw14.png'); transform: scaleX(1); }
-    87.5%, 93.75% { background-image: url('Paw15.png'); transform: scaleX(1); }
-    93.75%, 100% { background-image: url('Paw16.png'); transform: scaleX(1); }
-}
+            0%, 6.25% { background-image: url('Paw1.png'); transform: scaleX(1); }
+            6.25%, 12.5% { background-image: url('Paw2.png'); transform: scaleX(1); }
+            12.5%, 18.75% { background-image: url('Paw3.png'); transform: scaleX(1); }
+            18.75%, 25% { background-image: url('Paw4.png'); transform: scaleX(1); }
+            25%, 31.25% { background-image: url('Paw5.png'); transform: scaleX(1); }
+            31.25%, 37.5% { background-image: url('Paw6.png'); transform: scaleX(1); }
+            37.5%, 43.75% { background-image: url('Paw7.png'); transform: scaleX(1); }
+            43.75%, 50% { background-image: url('Paw8.png'); transform: scaleX(1); }
+
+            /* Flipped Cycle */
+            50%, 56.25% { background-image: url('Paw9.png'); transform: scaleX(1); }
+            56.25%, 62.5% { background-image: url('Paw10.png'); transform: scaleX(1); }
+            62.5%, 68.75% { background-image: url('Paw11.png'); transform: scaleX(1); }
+            68.75%, 75% { background-image: url('Paw12.png'); transform: scaleX(1); }
+            75%, 81.25% { background-image: url('Paw13.png'); transform: scaleX(1); }
+            81.25%, 87.5% { background-image: url('Paw14.png'); transform: scaleX(1); }
+            87.5%, 93.75% { background-image: url('Paw15.png'); transform: scaleX(1); }
+            93.75%, 100% { background-image: url('Paw16.png'); transform: scaleX(1); }
+        }
+
+        @keyframes fadeBookIcon {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+        .download-link a[href*='amazon.com'] img {
+            animation: fadeBookIcon 3s infinite;
+        }
     </style>
 </head>
 <body>
@@ -169,7 +177,7 @@
             <div class="download-text">RESUME</div>
         </a>
         <a href="https://www.amazon.com/s?k=kimmer+o%27reilly&i=stripbooks&crid=2ZSWFK6AF4H9Q&sprefix=kimmer+o%27reill%2Cstripbooks%2C203&ref=nb_sb_noss" class="download-link">
-            <img src="BookIcon.png" alt="Download Resume" class="pdfIcon">
+            <img src="BookIcon.png" alt="Download Books" class="pdfIcon">
             <div class="download-text">BOOKS</div>
         </a>
     </div>
