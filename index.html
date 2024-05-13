@@ -159,9 +159,11 @@
     <div class="icon-container">
         <a href="https://www.instagram.com/kimmerandcasper" class="download-link">
             <img src="SocialMediaIcon.png" alt="Kimmer's Instagram" class="pdfIcon">
+            <div class="download-text">INSTA</div>
         </a>
         <a href="MyResume.pdf" download class="download-link">
             <img src="PDFicon.png" alt="Download Resume" class="pdfIcon">
+            <div class="download-text">RESUME</div>
         </a>
         <a href="https://www.amazon.com/s?k=kimmer+o%27reilly&i=stripbooks&crid=2ZSWFK6AF4H9Q&sprefix=kimmer+o%27reill%2Cstripbooks%2C203&ref=nb_sb_noss" class="download-link">
             <img src="BookIcon1.png" alt="Download Books" class="pdfIcon" id="bookIcon">
@@ -201,18 +203,15 @@
         titleAnimation.start();
 
         let bookIconAnimation = {
-            images: ['BookIcon1.png', 'BookIcon2.png'],
+            images: ['BookIcon1.png', 'BookIcon2.png', 'BookIcon3.png', 'BookIcon4.png', 'BookIcon5.png', 'BookIcon6.png', 'BookIcon7.png', 'BookIcon8.png', 'BookIcon9.png', 'BookIcon10.png'],
             currentIndex: 0,
             switchImage: function() {
                 const bookIcon = document.getElementById('bookIcon');
-                setTimeout(() => {
-                    this.currentIndex = (this.currentIndex + 1) % this.images.length;
-                    bookIcon.src = this.images[this.currentIndex];
-                    bookIcon.style.opacity = 1; // Fade back in
-                }, 750); // Half of your intended transition time
+                this.currentIndex = (this.currentIndex + 1) % this.images.length;
+                bookIcon.src = this.images[this.currentIndex];
             },
             start: function() {
-                setInterval(this.switchImage.bind(this), 1500); // Adjust as needed
+                setInterval(this.switchImage.bind(this), 3000); // Adjust as needed
             }
         };
         bookIconAnimation.start();
