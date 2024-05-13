@@ -19,6 +19,14 @@
             margin-top: 0px; /* Reduced top margin for the title */
             color: #000000; /* Black color for headings */
             font-family: 'Nunito', sans-serif; /* Ensure headings use Nunito */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .title-animation {
+            height: 1.2em; /* Adjust to match the 'K' height */
+            width: 1.2em; /* Square images */
+            margin: 0 10px;
         }
         
         img.profile, img.service-dog {
@@ -97,7 +105,11 @@
     </style>
 </head>
 <body>
-    <h1>Kimmer O'Reilly</h1>
+    <h1>
+        <img src="MotorcyclePic.png" alt="Animation Left" class="title-animation" id="animationLeft">
+        Kimmer O'Reilly
+        <img src="MotorcyclePic.png" alt="Animation Right" class="title-animation" id="animationRight">
+    </h1>
     <img src="MotorcyclePic.png" alt="Kimmer O'Reilly" class="profile" id="profileImage">
     <div class="bio">
         Surviving cancer twice redirected me from finance to more creative pursuits. When I'm not adventuring on motorcycle with my Casper, I'm building fantasy and technology.
@@ -132,6 +144,23 @@
             }
         };
         imageSwitcher.start();
+
+        // New script for title animations
+        let titleAnimation = {
+            images: ['MotorcyclePic.png', 'pinkShirtPic.png', 'CasperOnBike.png'],
+            currentIndex: 0,
+            switchImage: function() {
+                const animationLeft = document.getElementById('animationLeft');
+                const animationRight = document.getElementById('animationRight');
+                this.currentIndex = (this.currentIndex + 1) % this.images.length;
+                animationLeft.src = this.images[this.currentIndex];
+                animationRight.src = this.images[this.currentIndex];
+            },
+            start: function() {
+                setInterval(this.switchImage.bind(this), 2000);
+            }
+        };
+        titleAnimation.start();
     </script>
 </body>
 </html>
