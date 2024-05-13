@@ -149,12 +149,19 @@
         }
 
         @keyframes fadeBookIcon {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0; }
-        }
-        .download-link a[href*='amazon.com'] img {
-            animation: fadeBookIcon 3s infinite;
-        }
+    0%, 100% {
+        content: url('BookIcon1.png');
+        opacity: 1;
+    }
+    50% {
+        content: url('BookIcon2.png');
+        opacity: 0.5;
+    }
+}
+
+        .download-link a[href*="amazon.com"] img {
+    animation: fadeBookIcon 3s infinite;
+}
     </style>
 </head>
 <body>
