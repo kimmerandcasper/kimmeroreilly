@@ -88,6 +88,8 @@
             animation: electricBackground 0.25s infinite;
         }
         .button2 {
+    position: relative;
+    overflow: hidden; /* Ensures no spillover from the pseudo-element */
     display: block;
     padding: 10px 20px;
     margin: 10px auto;
@@ -99,9 +101,24 @@
     font-family: 'Nunito', sans-serif;
     width: 200px;
     transition: color 0.3s;
-    background-size: cover;
-    animation: pawAnimation 4s infinite;
 }
+
+.button2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    z-index: -1;
+    animation: pawAnimation 16s infinite linear; /* Adjust time to match double cycle length */
+}
+
+.button2 > * {
+    position: relative; /* Ensures button text appears above the pseudo-element */
+}
+
 
         .button:hover {
             background-color: #3a0070;
@@ -127,15 +144,26 @@
             50% { background-image: url('Electric2.png'); }
         }
         @keyframes pawAnimation {
-    12.5% { background-image: url('Paw1.png'); }
-    25% { background-image: url('Paw2.png'); }
-    37.5% { background-image: url('Paw3.png'); }
-    50% { background-image: url('Paw4.png'); }
-    62.5% { background-image: url('Paw5.png'); }
-    75% { background-image: url('Paw6.png'); }
-    87.5% { background-image: url('Paw7.png'); }
-    100% { background-image: url('Paw8.png'); }
+    0%, 12.5% { background-image: url('Paw1.png'); transform: scaleX(1); }
+    12.5%, 25% { background-image: url('Paw2.png'); transform: scaleX(1); }
+    25%, 37.5% { background-image: url('Paw3.png'); transform: scaleX(1); }
+    37.5%, 50% { background-image: url('Paw4.png'); transform: scaleX(1); }
+    50%, 62.5% { background-image: url('Paw5.png'); transform: scaleX(1); }
+    62.5%, 75% { background-image: url('Paw6.png'); transform: scaleX(1); }
+    75%, 87.5% { background-image: url('Paw7.png'); transform: scaleX(1); }
+    87.5%, 100% { background-image: url('Paw8.png'); transform: scaleX(1); }
+    
+    /* Flipped Cycle */
+    100%, 112.5% { background-image: url('Paw1.png'); transform: scaleX(-1); }
+    112.5%, 125% { background-image: url('Paw2.png'); transform: scaleX(-1); }
+    125%, 137.5% { background-image: url('Paw3.png'); transform: scaleX(-1); }
+    137.5%, 150% { background-image: url('Paw4.png'); transform: scaleX(-1); }
+    150%, 162.5% { background-image: url('Paw5.png'); transform: scaleX(-1); }
+    162.5%, 175% { background-image: url('Paw6.png'); transform: scaleX(-1); }
+    175%, 187.5% { background-image: url('Paw7.png'); transform: scaleX(-1); }
+    187.5%, 200% { background-image: url('Paw8.png'); transform: scaleX(-1); }
 }
+
     </style>
 </head>
 <body>
