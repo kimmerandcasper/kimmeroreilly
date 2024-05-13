@@ -88,19 +88,21 @@
             animation: electricBackground 0.25s infinite;
         }
         .button2 {
-            display: block;
-            padding: 10px 20px;
-            margin: 10px auto;
-            background-color: #ffffff;
-            color: #000000;
-            border: 2px solid #3a0070;
-            text-decoration: none;
-            font-size: 16px;
-            font-family: 'Nunito', sans-serif;
-            width: 200px;
-            transition: color 0.3s;
-            background-size: cover;
-        }
+    display: block;
+    padding: 10px 20px;
+    margin: 10px auto;
+    background-color: #ffffff;
+    color: #000000;
+    border: 2px solid #3a0070;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: 'Nunito', sans-serif;
+    width: 200px;
+    transition: color 0.3s;
+    background-size: cover;
+    animation: pawAnimation 4s infinite;
+}
+
         .button:hover {
             background-color: #3a0070;
             color: #FFFFFF;
@@ -124,6 +126,16 @@
             0%, 100% { background-image: url('Electric1.png'); }
             50% { background-image: url('Electric2.png'); }
         }
+        @keyframes pawAnimation {
+    12.5% { background-image: url('Paw1.png'); }
+    25% { background-image: url('Paw2.png'); }
+    37.5% { background-image: url('Paw3.png'); }
+    50% { background-image: url('Paw4.png'); }
+    62.5% { background-image: url('Paw5.png'); }
+    75% { background-image: url('Paw6.png'); }
+    87.5% { background-image: url('Paw7.png'); }
+    100% { background-image: url('Paw8.png'); }
+}
     </style>
 </head>
 <body>
