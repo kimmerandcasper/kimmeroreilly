@@ -3,30 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kimmer O'Reilly - Author & Professional</title>
+    <title>Kimmer O'Reilly - Author & Technologist</title>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Nunito', sans-serif; /* Applying Nunito */
+            font-family: 'Nunito', sans-serif;
             text-align: center;
             padding: 20px;
-            background-color: #FFFFFF; /* Updated to white background */
-            color: #000000; /* Black text color */
+            background-color: #FFFFFF;
+            color: #000000;
             margin: 0 auto;
             max-width: 800px;
         }
         h1, h2 {
-            margin-top: 0px; /* Reduced top margin for the title */
-            color: #000000; /* Black color for headings */
-            font-family: 'Nunito', sans-serif; /* Ensure headings use Nunito */
+            margin-top: 0px;
+            color: #000000;
+            font-family: 'Nunito', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-        
+        .title-animation {
+            height: 1.2em;
+            width: 1.2em;
+            margin: 0 10px;
+        }
+        .title-animation-right {
+            transform: scaleX(-1);
+        }
         img.profile, img.service-dog {
             width: 300px;
             height: auto;
             border-radius: 50%;
-            margin-top: 0px; /* Reduced top margin for the profile image */
-            border: 3px solid #FF0000; /* Neon Red border */
+            margin-top: 0px;
+            border: 3px solid #3a0070; /* Adjusted to purple */
         }
         .icon-container {
             display: flex;
@@ -36,29 +46,30 @@
             max-width: 800px;
         }
         .pdfIcon {
-            width: 100%; /* Responsive width */
-            height: auto; /* Maintain aspect ratio */
+            width: 100%;
+            height: auto;
+            transition: opacity 1.5s;
         }
         .download-link {
             display: flex;
             flex-direction: column;
             align-items: center;
             margin: 5px;
-            flex: 1; /* Equal flex-grow, flex-shrink and flex-basis */
+            flex: 1;
         }
         .email, .download-text {
             margin: 10px;
             font-size: 18px;
-            color: #000000; /* Black text color */
-            font-family: 'Nunito', sans-serif; /* Applying Nunito */
+            color: #000000;
+            font-family: 'Nunito', sans-serif;
             padding: 0 10px;
             text-align: center;
         }
         .bio {
             margin: 20px;
             font-size: 18px;
-            color: #000000; /* Black text color */
-            font-family: 'Nunito', sans-serif; /* Applying Nunito */
+            color: #000000;
+            font-family: 'Nunito', sans-serif;
             padding: 0 10px;
             text-align: left;
         }
@@ -66,27 +77,27 @@
             display: block;
             padding: 10px 20px;
             margin: 10px auto;
-            background-color: #ffffff; /* White background */
-            color: #000000; /* Black text */
-            border: 2px solid #FF0000; /* Neon Red border */
+            background-color: #ffffff;
+            color: #000000;
+            border: 2px solid #3a0070; /* Adjusted to purple */
             text-decoration: none;
             font-size: 16px;
-            font-family: 'Nunito', sans-serif; /* Applying Nunito */
+            font-family: 'Nunito', sans-serif;
             width: 200px;
             transition: background-color 0.3s, color 0.3s;
         }
         .button:hover {
-            background-color: #FF0000; /* Neon Red background */
-            color: #FFFFFF; /* White text */
+            background-color: #3a0070; /* Adjusted to purple */
+            color: #FFFFFF;
         }
         @media (max-width: 768px) {
             .pdfIcon {
-                max-width: 60px; 
+                max-width: 60px;
             }
         }
         @media (min-width: 769px) and (max-width: 1200px) {
             .pdfIcon {
-                max-width: 80px; 
+                max-width: 80px;
             }
         }
         @media (min-width: 1201px) {
@@ -97,26 +108,61 @@
     </style>
 </head>
 <body>
-    <h1>Kimmer O'Reilly</h1>
-    <img src="MtStHelens.jpg" alt="Kimmer O'Reilly" class="profile">
-    <div class="email">kimmerandcasper@gmail.com</div>
+    <h1>
+        <img src="Flame1.png" alt="Animation Left" class="title-animation" id="animationLeft">
+        Kimmer O'Reilly
+        <img src="Flame1.png" alt="Animation Right" class="title-animation title-animation-right" id="animationRight">
+    </h1>
+    <img src="MtStHelens.jpg" alt="Kimmer O'Reilly" class="profile" id="profileImage">
     <div class="bio">
-        Surviving cancer twice redirected me from finance to more creative pursuits. When I'm not adventuring on motorcycle with my Casper, I'm building fantasy and technology.
+        Defeated Cancer 2x. Motorcycles with dogs. Crafts fantasy and technology.
     </div>
     <div class="icon-container">
         <a href="http://www.smear.app" class="download-link">
-            <img src="SmearApp.png" alt="Kimmer's Instagram" class="pdfIcon">
+            <img src="SmearApp.png" alt="Smear App" class="pdfIcon">
             <div class="download-text">Smear.app</div>
         </a>
-        <a href="https://www.mousepup.com" download class="download-link">
-            <img src="Mousepup.png" alt="Download Resume" class="pdfIcon">
+        <a href="https://www.mousepup.com" class="download-link">
+            <img src="Mousepup.png" alt="Mouse Pup" class="pdfIcon">
             <div class="download-text">Mouse Pup</div>
         </a>
-        <a href="https://alexandrablackandthethiefofdeath.com" download class="download-link">
-            <img src="ABTOD.png" alt="Download Resume" class="pdfIcon">
+        <a href="https://alexandrablackandthethiefofdeath.com" class="download-link">
+            <img src="ABTOD.png" alt="A.B. / T.O.D." class="pdfIcon">
             <div class="download-text">A.B. / T.O.D.</div>
         </a>
     </div>
     <a href="index.html" class="button">Home</a>
+
+    <script>
+        let titleAnimation = {
+            images: ['Flame1.png', 'Flame2.png', 'Flame3.png'],
+            currentIndex: 0,
+            switchImage: function() {
+                const animationLeft = document.getElementById('animationLeft');
+                const animationRight = document.getElementById('animationRight');
+                this.currentIndex = (this.currentIndex + 1) % this.images.length;
+                animationLeft.src = this.images[this.currentIndex];
+                animationRight.src = this.images[this.currentIndex];
+            },
+            start: function() {
+                setInterval(this.switchImage.bind(this), 333);
+            }
+        };
+        titleAnimation.start();
+
+        let imageSwitcher = {
+            images: ['MtStHelens.jpg', 'secondImage.jpg', 'thirdImage.jpg'], // Adjust with actual images
+            currentIndex: 0,
+            switchImage: function() {
+                const profileImage = document.getElementById('profileImage');
+                this.currentIndex = (this.currentIndex + 1) % this.images.length;
+                profileImage.src = this.images[this.currentIndex];
+            },
+            start: function() {
+                setInterval(this.switchImage.bind(this), 2000);
+            }
+        };
+        imageSwitcher.start();
+    </script>
 </body>
 </html>
