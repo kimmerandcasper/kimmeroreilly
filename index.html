@@ -147,7 +147,7 @@
 
         // New script for title animations
         let titleAnimation = {
-            images: ['MotorcyclePic.png', 'pinkShirtPic.png', 'CasperOnBike.png'],
+            images: ['Flame1.png', 'Flame2.png', 'Flame3.png'],
             currentIndex: 0,
             switchImage: function() {
                 const animationLeft = document.getElementById('animationLeft');
@@ -157,7 +157,7 @@
                 animationRight.src = this.images[this.currentIndex];
             },
             start: function() {
-                setInterval(this.switchImage.bind(this), 2000);
+                setInterval(this.switchImage.bind(this), 333);
             }
         };
         titleAnimation.start();
