@@ -208,8 +208,6 @@
             currentIndex: 0,
             switchImage: function() {
                 const bookIcon = document.getElementById('bookIcon');
-                // Fade out, then switch image and fade in
-                bookIcon.style.opacity = 0; // Start by fading out
                 setTimeout(() => {
                     this.currentIndex = (this.currentIndex + 1) % this.images.length;
                     bookIcon.src = this.images[this.currentIndex];
