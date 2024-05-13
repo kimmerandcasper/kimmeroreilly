@@ -48,6 +48,7 @@
         .pdfIcon {
             width: 100%;
             height: auto;
+            transition: opacity 1.5s; /* Smooth transition for opacity changes */
         }
         .download-link {
             display: flex;
@@ -143,14 +144,6 @@
             87.5%, 93.75% { background-image: url('Paw15.png'); transform: scaleX(1); }
             93.75%, 100% { background-image: url('Paw16.png'); transform: scaleX(1); }
         }
-        @keyframes fadeBookIcon {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.5; }
-}
-
-        .download-link a[href*="amazon.com"] img {
-            animation: fadeBookIcon 3s infinite;
-        }
     </style>
 </head>
 <body>
@@ -173,7 +166,7 @@
             <div class="download-text">RESUME</div>
         </a>
         <a href="https://www.amazon.com/s?k=kimmer+o%27reilly&i=stripbooks&crid=2ZSWFK6AF4H9Q&sprefix=kimmer+o%27reill%2Cstripbooks%2C203&ref=nb_sb_noss" class="download-link">
-            <img src="BookIcon1.png" alt="Download Books" class="pdfIcon">
+            <img src="BookIcon1.png" alt="Download Books" class="pdfIcon" id="bookIcon">
             <div class="download-text">BOOKS</div>
         </a>
     </div>
@@ -209,20 +202,25 @@
             }
         };
         titleAnimation.start();
-        let bookIconAnimation = {
-    images: ['BookIcon1.png', 'BookIcon2.png'],
-    currentIndex: 0,
-    switchImage: function() {
-        const bookIcon = document.querySelector('.download-link a[href*="amazon.com"] img');
-        bookIcon.src = this.images[this.currentIndex];
-        this.currentIndex = (this.currentIndex + 1) % this.images.length;
-    },
-    start: function() {
-        setInterval(this.switchImage.bind(this), 1500); // 1500ms for a clear switch effect
-    }
-};
-bookIconAnimation.start();
 
+        let bookIconAnimation = {
+            images: ['BookIcon1.png', 'BookIcon2.png'],
+            currentIndex: 0,
+            switchImage: function() {
+                const bookIcon = document.getElementById('bookIcon');
+                // Fade out, then switch image and fade in
+                bookIcon.style.opacity = 0; // Start by fading out
+                setTimeout(() => {
+                    this.currentIndex = (this.currentIndex + 1) % this.images.length;
+                    bookIcon.src = this.images[this.currentIndex];
+                    bookIcon.style.opacity = 1; // Fade back in
+                }, 750); // Half of your intended transition time
+            },
+            start: function() {
+                setInterval(this.switchImage.bind(this), 1500); // Adjust as needed
+            }
+        };
+        bookIconAnimation.start();
     </script>
 </body>
 </html>
